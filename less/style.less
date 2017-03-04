@@ -1,3 +1,4 @@
+// VARIAVEIS
 @background-color: #ccc;
 @text-color: #1A237E;
 
@@ -13,4 +14,72 @@ ul{
 
 li{
   color: @text-color;
+}
+
+//MIXINS
+#circle(@size: 25px){
+  background-color: #4CAF50;
+  border-radius: 100%;
+
+  width: @size;
+  height: @size;
+}
+
+#small-circle{
+  #circle
+}
+
+#big-circle{
+  #circle(100px)
+}
+
+//NESTING AND SCOPE
+@text-color: #000000;
+
+div#lista2 ul{
+  @text-color: #fff;
+  background-color: #03A9F4;
+  padding: 10px;
+  list-style: none;
+  width:100%;
+
+  li{
+    color: @text-color;
+    border-radius: 3px;
+    margin: 10px 0;
+  }
+}
+
+//OPERATIONS
+@div-width: 100px;
+@color: #03A9F4;
+
+#operations(){
+  height: 50px;
+  display: inline-block;
+}
+#left{
+  #operations;
+  width: @div-width;
+  background-color: @color - 100;
+}
+
+#right{
+  #operations;
+  width: @div-width * 2;
+  background-color: @color;
+}
+
+//FUNCTIONS
+
+@var: #004590;
+
+div#functions{
+  height: 50px;
+  width: 50px;
+  background-color: @var;
+
+  &:hover{
+    background-color: fadeout(@var, 50%)
+  }
 }
