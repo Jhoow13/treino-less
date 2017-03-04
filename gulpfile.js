@@ -18,4 +18,4 @@ gulp.task('watch', function(){
     gulp.watch('less/**/*.less', ['less']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['clean', 'watch']);
