@@ -1,0 +1,16 @@
+{
+  "name": "treino-less",
+  "version": "1.0.0",
+  "description": "testes basicos ininciando com less",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joelcsilva@outlook.com",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-less": "^3.3.0"
+  }
+}
